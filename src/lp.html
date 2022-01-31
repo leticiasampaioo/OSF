@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Category Landind Page</title>
+</head>
+
+
+<body>
+    <!-- Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-4">
+
+                <h5 class="modal-title text-center fs-2 fw-bold pb-4" id="loginModalLabel">Sing In</h5>
+                <div class="mb-3">
+
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control rounded-pill" id="email">
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="form-label">Password</label>
+                    <span class="float-end text-green">forgot password?</span>
+                    <div class="div-button">
+                        <input type="password" class="form-control rounded-pill" id="password">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-eye" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                            <path
+                                d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+                        </svg>
+                    </div>
+                </div>
+                <button type="button" id="login" class="btn rounded-pill col-6 m-auto mb-3">LOGIN</button>
+                <p class="text-center text-green">I don´t have an account</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-md fixed-top p-0">
+            <div class="container">
+                <a class="navbar-brand mx-4" href="index.html"><img src="../assets/logo.png" height="40px;"></a>
+                <button class="navbar-toggler mx-4" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto d-md-flex d-block flex-row mx-md-auto mx-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Services
+                            </a>
+                            <!-- Huge Dropdown Menu -->
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="container">
+                                    <div class="row Scroll">
+                                        <div class="col-md-6" style="text-align: left;">
+                                            <h6 class="dropdown-header" style="color:white;" id="product">PRODUCT
+                                                CATEGORIES</h6>
+                                            <div class="d-md-flex w-100 d-block p-0" id="categories">
+                                                <div class="col">
+                                                    <a class="dropdown-item" href="404.html">Accessories</a>
+                                                    <a class="dropdown-item" href="404.html">Alcohol</a>
+                                                    <a class="dropdown-item" href="404.html">Art</a>
+                                                    <a class="dropdown-item" href="404.html">Books</a>
+                                                    <a class="dropdown-item" href="404.html">Drink</a>
+                                                    <a class="dropdown-item" href="404.html">Electronics</a>
+                                                    <a class="dropdown-item" href="404.html">Flowers & Plants</a>
+                                                    <a class="dropdown-item" href="404.html">Food</a>
+                                                </div>
+                                                <div class="col">
+                                                    <a class="dropdown-item" href="404.html">Gadgets</a>
+                                                    <a class="dropdown-item" href="404.html">Garden</a>
+                                                    <a class="dropdown-item" href="404.html">Grocery</a>
+                                                    <a class="dropdown-item" href="404.html">Home</a>
+                                                    <a class="dropdown-item" href="404.html">Jewelry</a>
+                                                    <a class="dropdown-item" href="404.html">Kids & Baby</a>
+                                                    <a class="dropdown-item" href="404.html">Men's Fashion</a>
+                                                    <a class="dropdown-item" href="404.html">Mobile</a>
+                                                </div>
+                                                <div class="col">
+                                                    <a class="dropdown-item" href="404.html">Motorcycles</a>
+                                                    <a class="dropdown-item" href="404.html">Movies</a>
+                                                    <a class="dropdown-item" href="404.html">Music</a>
+                                                    <a class="dropdown-item" href="404.html">Office</a>
+                                                    <a class="dropdown-item" href="404.html">Pets</a>
+                                                    <a class="dropdown-item" href="404.html">Romantic</a>
+                                                    <a class="dropdown-item" href="404.html">Sport</a>
+                                                    <a class="dropdown-item" href="404.html">Toys</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2" style="text-align: left;">
+                                            <h6 class="dropdown-header" style="color:white;">SALE</h6>
+                                            <a class="dropdown-item" href="404.html">Accessories</a>
+                                            <a class="dropdown-item" href="404.html">Alcohol</a>
+                                            <a class="dropdown-item" href="404.html">Art</a>
+                                            <a class="dropdown-item" href="404.html">Books</a>
+                                            <a class="dropdown-item" href="404.html">Drink</a>
+                                            <a class="dropdown-item" href="404.html">Electronics</a>
+                                            <a class="dropdown-item" href="404.html">Flowers & Plants</a>
+                                            <a class="dropdown-item" href="404.html">Food</a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <img src="../assets/2.png" class="img-fluid w-100 rounded">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pdp.html">Company</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Library</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                        <li class="nav-item select d-none d-md-block">
+                            <select class="form-select" aria-label="Default select example">
+                                <option value="EN" selected>EN</option>
+                                <option value="TR">TR</option>
+                                <option value="FR">FR</option>
+                                <option value="RU">RU</option>
+                            </select>
+                        </li>
+                        <li class="nav-item select d-none d-md-block">
+                            <select class="form-select" aria-label="Default select example">
+                                <option value="usdollar" selected>$US</option>
+                                <option value="tl">₺TL</option>
+                                <option value="cadollar">$CA</option>
+                                <option value="ruble">Ruble</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <div class="d-md-flex d-none">
+                        <li class="btn-li"><a class="nav-btn" href="#"><i class="fa fa-search"></i></a></li>
+                        <li class="btn-li"><a class="nav-btn" data-toggle="modal" data-target="#exampleModal"><i
+                                    class="fa fa-user"></i></a></li>
+                        <li class="btn-li"><a class="nav-btn" href="#"><i class="fa fa-heart"></i></a></li>
+                        <span class='badge badge-warning' id='lblLikeCount'> 0 </span>
+                        <li class="btn-li"><a class="nav-btn" href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                        <span class='badge badge-warning' id='lblCartCount'> 2 </span>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+
+        <div class="container-fluid px-0 pt-4">
+            <div class="col-11 mx-auto">
+                <!-- breadcrum -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="modal.html" class="text-green">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Category Landing</li>
+                    </ol>
+                </nav>
+
+                <div class="row align-items-center justify-content-center my-3">
+                    <hr class="col-4 m-0">
+                    <h1 class=" col-3 text-center p-0 mx-1">Services</h1>
+                    <hr class="col-4 m-0">
+                </div>
+
+                <p class="d-md-none text-green text-center btn-toggle" type="button" data-element="#filter">Hide Filter</p>
+
+                <!-- filter-->
+                <div class="row bg-white rounded m-1 px-2 pt-4" id="filter">
+
+                    <div class="col-12 col-md-4">
+                        <div class="row align-items-center mb-4">
+                            <div class="col-3">
+                                <label for="price" class="col-form-label">Price</label>
+                            </div>
+                            <div class="col-9">
+                                <select class="form-select rounded-pill" aria-label="Default select example" id="price">
+                                    <option selected>$0.00 — $100.00</option>
+                                    <option value="$100.00 — $200.00">$100.00 — $200.00</option>
+                                    <option value="$200.00 — $300.00">$200.00 — $300.00</option>
+                                    <option value="$300.00 — $400.00">$300.00 — $400.00</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center mb-4 pl-0">
+                            <div class="col-3">
+                                <label for="price" class="col-form-label">Color</label>
+                            </div>
+
+                            <div class="col-9">
+
+                                <div class="form-check form-check-inline m-0">
+                                    <input class="form-check-input bg-danger" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio1" value="option1">
+                                    <label class="form-check-label " for="inlineRadio1"></label>
+                                </div>
+                                <div class="form-check form-check-inline m-0">
+                                    <input class="form-check-input bg-info" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio1" value="option1">
+                                    <label class="form-check-label " for="inlineRadio1"></label>
+                                </div>
+                                <div class="form-check form-check-inline m-0">
+                                    <input class="form-check-input bg-success" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio1" value="option1">
+                                    <label class="form-check-label " for="inlineRadio1"></label>
+                                </div>
+                                <div class="form-check form-check-inline m-0">
+                                    <input class="form-check-input bg-danger" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio1" value="option1">
+                                    <label class="form-check-label " for="inlineRadio1"></label>
+                                </div>
+                                <div class="form-check form-check-inline m-0">
+                                    <input class="form-check-input bg-light" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio1" value="option1">
+                                    <label class="form-check-label " for="inlineRadio1"></label>
+                                </div>
+                                <div class="form-check form-check-inline m-0">
+                                    <input class="form-check-input bg-dark" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio1" value="option1">
+                                    <label class="form-check-label " for="inlineRadio1"></label>
+                                </div>
+                                <div class="form-check form-check-inline m-0">
+                                    <input class="form-check-input bg-warning" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio1" value="option1">
+                                    <label class="form-check-label " for="inlineRadio1"></label>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="row align-items-center mb-4">
+                            <div class="col-3">
+                                <label for="price" class="col-form-label">Brands</label>
+                            </div>
+                            <div class="col-9">
+                                <select class="form-select rounded-pill" aria-label="Default select example" id="price">
+                                    <option selected>Brands</option>
+                                    <option value="brand1">Brand 1</option>
+                                    <option value="brand2">Brand 2</option>
+                                    <option value="brand3">Brand 3</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="row align-items-center mb-4">
+                            <div class="col-3">
+                                <label for="price" class="col-form-label">Sort by</label>
+                            </div>
+                            <div class="col-9">
+                                <select class="form-select rounded-pill" aria-label="Default select example" id="price">
+                                    <option selected>Price</option>
+                                    <option value="color">Color</option>
+                                    <option value="stock">Stock</option>
+                                    <option value="brand">Brand</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="row align-items-center mb-4">
+                            <div class="col-3">
+                                <label for="price" class="col-form-label">Size</label>
+                            </div>
+                            <div class="col-9">
+                                <select class="form-select rounded-pill" aria-label="Default select example" id="price">
+                                    <option selected>Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                    <option value="extralarge">Extra Large</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="row align-items-center mb-4">
+                            <div class="col-3">
+                                <label for="price" class="col-form-label">Show</label>
+                            </div>
+                            <div class="col-9">
+                                <select class="form-select rounded-pill" aria-label="Default select example" id="price">
+                                    <option selected>8 per page</option>
+                                    <option value="12 per page">12 per page</option>
+                                    <option value="16 per page">16 per page</option>
+                                    <option value="20 per page">20 per page</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <p class="text-center my-4 pb-0">12,931 results in apparel</p>
+
+                <!-- result -->
+                <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2 g-3">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../assets/4.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Kristina Dam Oak Table With White Marble Top</h5>
+                                <p class="card-text text-center align-items-end">$ 799.55</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../assets/5.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Hay - About A Lounge
+                                    Chair AAL 93</h5>
+                                <p class="card-text text-center">$ 659.55</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../assets/4.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Kristina Dam Oak Table With White Marble Top</h5>
+                                <p class="card-text">$ 799.55</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../assets/5.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Hay - About A Lounge
+                                    Chair AAL 93</h5>
+                                <p class="card-text">$ 659.55</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../assets/4.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Kristina Dam Oak Table With White Marble Top</h5>
+                                <p class="card-text">$ 799.55</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../assets/5.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Hay - About A Lounge
+                                    Chair AAL 93</h5>
+                                <p class="card-text">$ 659.55</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../assets/4.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Kristina Dam Oak Table With White Marble Top</h5>
+                                <p class="card-text">$ 799.55</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../assets/5.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Hay - About A Lounge
+                                    Chair AAL 93</h5>
+                                <p class="card-text">$ 659.55</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col" id="teste">
+                        <div class="card h-100">
+                            <img src="../assets/4.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Kristina Dam Oak Table With White Marble Top</h5>
+                                <p class="card-text">$ 799.55</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+
+                <button type="button" id="loadmore" class="btn rounded-pill d-grid btn-size mx-auto my-4 btn-toggle" data-element="#teste">LOAD
+                    MORE</button>
+
+
+            </div>
+            <!-- featured products -->
+            <div class="bg-dark text-center p-4 d-none d-md-block">
+                <h2 class="text-white">Featured Products</h2>
+                <p class="text-white">Unde ominis iste natus error sit voluptatem</p>
+
+                <div id="multi-item-example" class="carousel slide carousel-multi-item mb-3" data-ride="carousel"
+                    data-bs-interval="false">
+                    <!--Controler-->
+                    <div class="row col-6 mx-auto">
+                        <button class=" col-1 border-0 bg-transparent" type="button"
+                            data-bs-target="#multi-item-example" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <div class="col mt-2">
+                            <div class="row align-items-center justify-content-center my-3">
+                                <hr class="col-5 text-white opacity-100">
+                                <p class=" col-2 text-white text-center"> ///</p>
+                                <hr class="col-5 text-white opacity-100">
+                            </div>
+                        </div>
+                        <button class="col-1 border-0 bg-transparent" type="button" data-bs-target="#multi-item-example"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                    <!--Slides-->
+                    <div class="carousel-inner" role="listbox">
+
+                        <!--First slide-->
+                        <div class="carousel-item active">
+
+                            <div class="row gap-0">
+                                <div class="col">
+                                    <div class="card h-100 border-0">
+                                        <img src="../assets/1.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Kristina Dam Oak Table With White Marble Top</h5>
+                                            <p class="card-text text-center text-green text-green fw-bold">Awesome
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100 border-0">
+                                        <img src="../assets/2.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Hay - About A Lounge
+                                                Chair AAL 93</h5>
+                                            <p class="card-text text-center text-green fw-bold">Awesome</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100 border-0">
+                                        <img src="../assets/3.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Kristina Dam Oak Table With White Marble Top</h5>
+                                            <p class="card-text text-center text-green fw-bold">Awesome</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100 border-0">
+                                        <img src="../assets/4.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Hay - About A Lounge
+                                                Chair AAL 93</h5>
+                                            <p class="card-text text-center text-green fw-bold">Awesome</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/.First slide-->
+
+                        <!--Second slide-->
+                        <div class="carousel-item">
+
+                            <div class="row gap-0">
+                                <div class="col">
+                                    <div class="card h-100 border-0">
+                                        <img src="../assets/5.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Kristina Dam Oak Table With White Marble Top</h5>
+                                            <p class="card-text text-center text-green text-green fw-bold">Awesome
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100 border-0">
+                                        <img src="../assets/3.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Hay - About A Lounge
+                                                Chair AAL 93</h5>
+                                            <p class="card-text text-center text-green fw-bold">Awesome</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100 border-0">
+                                        <img src="../assets/7.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Kristina Dam Oak Table With White Marble Top</h5>
+                                            <p class="card-text text-center text-green fw-bold">Awesome</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100 border-0">
+                                        <img src="../assets/2.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Hay - About A Lounge
+                                                Chair AAL 93</h5>
+                                            <p class="card-text text-center text-green fw-bold">Awesome</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/.Second slide-->
+
+                        <!--Third slide-->
+                        <div class="carousel-item">
+
+                            <div class="row gap-0">
+                                <div class="col">
+                                    <div class="card h-100 border-0">
+                                        <img src="../assets/4.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Kristina Dam Oak Table With White Marble Top</h5>
+                                            <p class="card-text text-center text-green text-green fw-bold">Awesome
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100 border-0">
+                                        <img src="../assets/1.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Hay - About A Lounge
+                                                Chair AAL 93</h5>
+                                            <p class="card-text text-center text-green fw-bold">Awesome</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100 border-0">
+                                        <img src="../assets/5.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Kristina Dam Oak Table With White Marble Top</h5>
+                                            <p class="card-text text-center text-green fw-bold">Awesome</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100 border-0">
+                                        <img src="../assets/3.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Hay - About A Lounge
+                                                Chair AAL 93</h5>
+                                            <p class="card-text text-center text-green fw-bold">Awesome</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/.Third slide-->
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="container-fluid py-5">
+        <div class="container">
+            <div class="row gap-4 gap-md-0">
+                <div class="col-md-2">
+                    <div class="logo-part">
+                        <p class="copyright">
+                            &copy; Copyright <span id="date"></span> <br />
+                            All Rights Reserved
+                        </p>
+                        <h6 type="button" class="btn-toggle" data-element="#contact">CONTACT</h6>
+                        <div class="d-md-block" id="contact">
+                            <address>
+                                Headquarters: <br />
+                                5600Blvd. des Galeries, Bur 530
+                                <br />
+                                Québec, Québec G2K 2H6
+                            </address>
+                            <p>
+                                <a href="mailto:contact@osf-global.com?subject= Hi%20there!">
+                                    contact@osf-global.com
+                                </a>
+                            </p>
+                            <p>
+                                <a href="tel:+1(888)548-4344">+1 (888) 548-4344</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h6 type="button" class="btn-toggle" data-element="#categorist">CATEGORIST</h6>
+                    <div class="row d-md-flex" id="categorist">
+                        <div class="col-md-4 my-0">
+                            <ul class="mb-0 ">
+                                <li>
+                                    <a href="404.html"> Alcohol</a>
+                                </li>
+                                <li>
+                                    <a href="404.html"> Art</a>
+                                </li>
+                                <li>
+                                    <a href="404.html"> Books</a>
+                                </li>
+                                <li>
+                                    <a href="404.html"> Drink</a>
+                                </li>
+                                <li>
+                                    <a href="404.html">
+                                        Eletronics</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="mb-0">
+                                <li>
+                                    <a href="404.html"> Home</a>
+                                </li>
+                                <li>
+                                    <a href="404.html"> Jewelry</a>
+                                </li>
+                                <li>
+                                    <a href="404.html">
+                                        Kids & Baby</a>
+                                </li>
+                                <li>
+                                    <a href="404.html">
+                                        Men's Fashion</a>
+                                </li>
+                                <li>
+                                    <a href="404.html"> Mobile</a>
+                                </li>
+                                <li>
+                                    <a href="404.html">
+                                        Motorcycles</a>
+                                </li>
+                                <li>
+                                    <a href="404.html"> Movies</a>
+                                </li>
+                                <li>
+                                    <a href="404.html"> Music</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul>
+                                <li>
+                                    <a href="404.html"> Sport</a>
+                                </li>
+                                <li>
+                                    <a href="404.html"> Toys</a>
+                                </li>
+                                <li>
+                                    <a href="404.html"> Travel</a>
+                                </li>
+                                <li>
+                                    <a href="404.html">
+                                        Women's Fashion</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <h6 type="button" class="btn-toggle" data-element="#about">ABOUT</h6>
+                    <div class="d-md-block" id="about">
+                        <ul>
+                            <li>
+                                <a href="404.html">About us</a>
+                            </li>
+                            <li>
+                                <a href="404.html"> Delivery</a>
+                            </li>
+                            <li>
+                                <a href="404.html"> Testimonials</a>
+                            </li>
+                            <li>
+                                <a href="404.html"> Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="col-md-2  d-flex justify-content-center">
+                    <div class="social mx-auto">
+                        <a href="https://www.facebook.com/OSFDigital/" class="fa" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.instagram.com/osfdigital/" class="fa" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/osf-digital/" class="fa" target="_blank"
+                            rel="noopener">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://twitter.com/osfdigital" class="fa" target="_blank" rel="noopener">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.pinterest.ca/osfglobal/" class="fa" target="_blank" rel="noopener">
+                            <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   <!-- Script -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+   crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+       crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+       crossorigin="anonymous"></script>
+   <script src="../node_modules/jquery/dist/jquery.js"></script>
+   <script src="../src/js/script.js"></script>
+</body>
+
+</html>
